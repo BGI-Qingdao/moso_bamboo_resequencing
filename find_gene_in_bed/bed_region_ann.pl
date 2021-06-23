@@ -27,7 +27,7 @@ my $usage = <<END;
   1.0 -- only output one gene for each region, should be not used any more.
  
  [note]
-  gff and bed is 1-based in this script
+  bed is 0-based 
 END
 die "$usage\n" if (@ARGV == 0);
 my ($gff,$bed,$out);
