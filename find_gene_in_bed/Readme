@@ -1,10 +1,20 @@
 <Script 1> 
-  name: bed_region_ann.pl
-  description: This is a simple Perl script to find the genes in defined regions
-  usage: perl bed_region_ann.pl [option] --gff <in.gff> --bed <in.bed> --out <out>
+  name: 
+    bed_region_ann.pl
+  
+  description:
+    This is a simple Perl script to find the genes in defined regions
+  
+  usage:
+    perl bed_region_ann.pl [option] --gff <in.gff> --bed <in.bed> --out <out>
+  
   option:
    --col    three cols to define one region [1,2,3]
    --extend extend length around defined BED region [0]
    --help   help information
+  
   note:
     GFF file is 1-based and however BED file is 0-based in this script
+  
+  example: 
+    bed_region_ann.pl --gff ../../../00.genome/moso.hic_merge.gff --bed cnv.bed --out cnv.ann.bed
