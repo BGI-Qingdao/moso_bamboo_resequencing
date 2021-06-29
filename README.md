@@ -4,7 +4,7 @@ The pipelines and scripts used in moso bamboo sequencing, including 5 parts as f
 
 ## 1. SNP & Indel detection using GATK
 
-## 2. Structural variation detection using Breakdancer, Manta, and SUVOVOR
+## 2. Structural variation detection using Breakdancer, Manta, and SURVIVOR
 
 ## 3. Copy number variation detection using Control-FREEC
 
