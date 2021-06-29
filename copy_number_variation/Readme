@@ -1,1 +1,9 @@
-Pipeline to detect CNV
+Pipeline to detect CNV using Control-FREEC (version 11.5)
+
+CNV.main.sh -- detect population-scaled CNV regions using Control-FREEC
+ 
+ [usage]
+  CNV.main.sh <genome path> <bam.list> <outdir> <basename>
+ 
+ [note]
+  <bam.list> format (with two columns): sample_id bam_path
