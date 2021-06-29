@@ -42,5 +42,5 @@ sd=`cut -f 2 $outdir/$basename.window_hete.stats`
 high_cutoff=`expr $avg + $sd`
 low_cutoff=`expr $avg - $sd`
 ## long regions large than 5 Mb
-awk -v cut=$high_cutoff '$5>cut' $outdir/$basename.window_hete.txt | bedtools merge -d 900000 -i /dev/stdin | awk '$3-$2+1>=5000000' > $outdir/$base.high.SD_avg.bed 
-awk -v cut=$low_cutoff  '$5<cut' $outdir/$basename.window_hete.txt | bedtools merge -d 900000 -i /dev/stdin | awk '$3-$2+1>=5000000' > $outdir/$base.low.SD_avg.bed
+awk -v cut=$high_cutoff '$5>cut' $outdir/$basename.window_hete.txt | $Bin/bedtools merge -d 900000 -i /dev/stdin | awk '$3-$2+1>=5000000' > $outdir/$base.high.SD_avg.bed 
+awk -v cut=$low_cutoff  '$5<cut' $outdir/$basename.window_hete.txt | $Bin/bedtools merge -d 900000 -i /dev/stdin | awk '$3-$2+1>=5000000' > $outdir/$base.low.SD_avg.bed
