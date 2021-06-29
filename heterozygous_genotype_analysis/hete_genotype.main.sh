@@ -28,11 +28,11 @@ HELP
 $Bin/vcftools --gzvcf $vcf --hwe --out $outdir/$basename
 
 # Step2. caluate the ratio of heterozygous genotypes for each SNP site
-perl $Bin/vcf.site_hete.pl $outdir/$basename.hwe $outdir/$basename.site_hete.txt
+perl $Bin/hwe.site_hete.pl $outdir/$basename.hwe $outdir/$basename.site_hete.txt
 
 # step3. calulate the averge ratio of heterozygous genotypes in windows (I used 200kb there to intend to detect longer heterozygous regions)
 perl $Bin/fa_bed.pl $genome $outdir/$basename.ref.len
-perl $Bin/freq.Ho.window.pl $outdir/$basename.hwe 200000 $outdir/$basename.ref.len $outdir/$basename.window_hete.txt
+perl $Bin/hwe.window_hete.pl $outdir/$basename.hwe 200000 $outdir/$basename.ref.len $outdir/$basename.window_hete.txt
 
 # step4. calculate average and S.D. value
 ## cutoff of high and low
